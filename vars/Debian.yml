@@ -2,4 +2,4 @@
 exim4__package: exim4
 exim4__daemon: exim4
 exim4__configuration_file: /etc/exim4/update-exim4.conf.conf
-exim4__mailx_package: mailx-bsd
+exim4__mailx_package: bsd-mailx
