@@ -4,7 +4,7 @@
   when: submodules_versioncheck|bool
 
 - name: Load a variable file based on OS Family
-  include_vars: "{{ lookup('first_found', params) }}"
+  ansible.builtin.include_vars: "{{ lookup('first_found', params) }}"
   vars:
     params:
       files:
@@ -12,3 +12,6 @@
         - default.yml
       paths:
         - 'vars'
+
+- name: exim4 installation
+  ansible.builtin.include_tasks: installation.yml

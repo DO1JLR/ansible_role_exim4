@@ -1,0 +1,14 @@
+---
+- name: Update apt cache
+  become: true
+  ansible.builtin.apt:
+    cache_valid_time: 3600
+    update_cache: true
+  when:
+    - ansible_pkg_mgr == "apt"
+
+- name: install exim4
+  become: true
+  ansible.builtin.package:
+    name: "{{ exim4__package }}"
+    state: "{{ exim4__state }}"
