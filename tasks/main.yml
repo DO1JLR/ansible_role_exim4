@@ -1,3 +1,14 @@
 ---
-- include_tasks: versioncheck.yml
+- name: Perform versionscheck if enabled
+  ansible.builtin.include_tasks: versioncheck.yml
   when: submodules_versioncheck|bool
+
+- name: Load a variable file based on OS Family
+  include_vars: "{{ lookup('first_found', params) }}"
+  vars:
+    params:
+      files:
+        - "{{ ansible_os_family }}.yml"
+        - default.yml
+      paths:
+        - 'vars'
