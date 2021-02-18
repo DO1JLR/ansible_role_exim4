@@ -1,8 +1,20 @@
 # ansible_role_exim4
 
-Ansible role to configure exim4 that it will send mail via external smtp server. (smarthost)
+Ansible role to configure exim4.
+By default you can tell exim4 that it will send mail via smarthost.
 
-This role is a work in proggress!
+To do this you have at leaset set the smarthost FQDN in the variable: ``exim4__dc_smarthost:``.
+
+ Example Playbook:
+----------------
+```
+- name: run exim4 role
+  hosts: localhost
+  roles:
+    - {role: dansible_role_exim, tags: exim4}
+  vars:
+    exim4__dc_smarthost: mx01.example.com
+```
 
  Testing
 ----------

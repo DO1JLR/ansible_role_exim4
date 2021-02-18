@@ -1,0 +1,10 @@
+---
+- name: Configure exim4 (Debian)
+  become: true
+  ansible.builtin.template:
+    src: 'templates/exim4.conf.j2'
+    dest: "{{ exim4__configuration_file }}"
+    mode: 0644
+    owner: root
+    group: root
+  notify: systemctl restart exim4

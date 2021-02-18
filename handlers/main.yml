@@ -1,0 +1,6 @@
+---
+- name: systemctl restart exim4
+  become: true
+  ansible.builtin.systemd:
+    name: "{{ exim4__daemon }}"
+    state: restarted

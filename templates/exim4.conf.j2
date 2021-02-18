@@ -1,0 +1,16 @@
+# exim4 config file
+# {{ ansible_managed }}
+# {{ exim4__configuration_file }}
+dc_eximconfig_configtype='{{ exim4__dc_eximconfig_configtype }}'
+dc_other_hostnames='{{ exim4__dc_other_hostnames }}'
+dc_local_interfaces='{{ exim4__dc_local_interfaces }}'
+dc_readhost='{{ exim4__dc_readhost }}'
+dc_relay_domains='{{ exim4__dc_relay_domains }}'
+dc_minimaldns='{{ exim4__dc_minimaldns|ternary('true', 'false') }}'
+dc_relay_nets='{{ exim4__dc_relay_nets }}'
+dc_smarthost='{{ exim4__dc_smarthost }}'
+CFILEMODE='{{ exim4__CFILEMODE }}'
+dc_use_split_config='{{ exim4__dc_use_split_config|ternary('true', 'false') }}'
+dc_hide_mailname='{{ exim4__dc_hide_mailname|ternary('true', 'false') }}'
+dc_mailname_in_oh='{{ exim4__dc_mailname_in_oh|ternary('true', 'false') }}'
+dc_localdelivery='{{ exim4__dc_localdelivery }}'

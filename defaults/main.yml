@@ -1,5 +1,22 @@
 ---
 exim4__state: present
 
+# please set the smarthost you wnt to use to send mails
+exim4__dc_smarthost: "{{sansible_fqdn }}"
+
+# you can adjust the other exim4 settings, if you want
+exim4__dc_eximconfig_configtype: 'satellite'
+exim4__dc_other_hostnames: "{{ hostname }}"
+exim4__dc_local_interfaces: '127.0.0.1 ; ::1'
+exim4__dc_readhost: "{{ hostname }}"
+exim4__dc_relay_domains: ''
+exim4__dc_minimaldns: false
+exim4__dc_relay_nets: ''
+exim4__CFILEMODE: '644'
+exim4__dc_use_split_config: 'false'
+exim4__dc_hide_mailname: 'true'
+exim4__dc_mailname_in_oh: 'true'
+exim4__dc_localdelivery: 'mail_spool'
+
 # should we do a version check? (recomended)
 submodules_versioncheck: false

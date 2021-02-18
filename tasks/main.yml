@@ -15,3 +15,12 @@
 
 - name: exim4 installation
   ansible.builtin.include_tasks: installation.yml
+
+- name: exim4 configuration
+  ansible.builtin.include_tasks: configuration.yml
+
+- name: systemctl start exim4
+  become: true
+  ansible.builtin.systemd:
+    name: "{{ exim4__daemon }}"
+    state: started
