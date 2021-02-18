@@ -12,3 +12,10 @@
   ansible.builtin.package:
     name: "{{ exim4__package }}"
     state: "{{ exim4__state }}"
+
+- name: install mailx
+  become: true
+  ansible.builtin.package:
+    name: "{{ exim4__mailx_package }}"
+    state: "{{ exim4__state }}"
+  when: exim4__install_mailx | bool

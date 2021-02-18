@@ -16,6 +16,13 @@ To do this you have at leaset set the smarthost FQDN in the variable: ``exim4__d
     exim4__dc_smarthost: mx01.example.com
 ```
 
+ Test if it is working
+---------------------
+To test if your exim4 configuration is working, maybe this will help:
+```
+mail': echo "This is a test" | mailx -s "Test Message" -v you@example.com
+```
+
  Testing
 ----------
 This role is tested with [these github-action](https://github.com/search?q=topic%3Acheck-ansible+topic%3Agithub-actions+org%3Aroles-ansible&type=Repositories) tests for different versions of differen linux systems. Linting is tested via travis-ci and the  [ansible-lint action](https://github.com/marketplace/actions/ansible-lint).
@@ -32,11 +39,8 @@ If you want to find out more about our tests, please have a look at the github m
 | [![Ansible check debian:buster](https://github.com/do1jlr/ansible_role_exim4/workflows/Ansible%20check%20debian:buster/badge.svg)](https://github.com/do1jlr/ansible_role_exim4/actions?query=workflow%3A%22Ansible+check+debian%3Abuster%22) | [ansible test with debian buster](https://github.com/marketplace/actions/check-ansible-debian-buster) |
 | [![Ansible check debian:stretch](https://github.com/do1jlr/ansible_role_exim4/workflows/Ansible%20check%20debian:stretch/badge.svg)](https://github.com/do1jlr/ansible_role_exim4/actions?query=workflow%3A%22Ansible+check+debian%3Astretch%22) | [ansible test with debian stretch](https://github.com/marketplace/actions/check-ansible-debian-stretch) |
 | | |
-| [![Ansible check archlinux:latest](https://github.com/do1jlr/ansible_role_exim4/workflows/Ansible%20check%20archlinux:latest/badge.svg)](https://github.com/do1jlr/ansible_role_exim4/actions?query=workflow%3A%22Ansible+check+archlinux%3Alatest%22) | [ansible test with archlinux latest](https://github.com/marketplace/actions/check-ansible-archlinux-latest) |
-| | |
 | [![Ansible check ubuntu:latest](https://github.com/do1jlr/ansible_role_exim4/workflows/Ansible%20check%20ubuntu:latest/badge.svg)](https://github.com/do1jlr/ansible_role_exim4/actions?query=workflow%3A%22Ansible+check+ubuntu%3Alatest%22) | [ansible test with ubuntu latest](https://github.com/marketplace/actions/check-ansible-ubuntu-latest) |
 | [![Ansible check ubuntu:bionic](https://github.com/do1jlr/ansible_role_exim4/workflows/Ansible%20check%20ubuntu:bionic/badge.svg)](https://github.com/do1jlr/ansible_role_exim4/actions?query=workflow%3A%22Ansible+check+ubuntu%3Abionic%22) | [ansible test with ubuntu bionic](https://github.com/marketplace/actions/check-ansible-ubuntu-bionic) |
-| [![Ansible check ubuntu:trusty](https://github.com/do1jlr/ansible_role_exim4/workflows/Ansible%20check%20ubuntu:trusty/badge.svg)](https://github.com/do1jlr/ansible_role_exim4/actions?query=workflow%3A%22Ansible+check+ubuntu%3Atrusty%22) | [ansible test with ubuntu trusty](https://github.com/marketplace/actions/check-ansible-ubuntu-trusty) |
 | | |
 | [![Ansible check centos:latest](https://github.com/do1jlr/ansible_role_exim4/workflows/Ansible%20check%20centos:latest/badge.svg)](https://github.com/do1jlr/ansible_role_exim4/actions?query=workflow%3A%22Ansible+check+centos%3Alatest%22) | [ansible test with centos latest](https://github.com/marketplace/actions/check-ansible-centos-latest) |
 | [![Ansible check centos:centos8](https://github.com/do1jlr/ansible_role_exim4/workflows/Ansible%20check%20centos:centos8/badge.svg)](https://github.com/do1jlr/ansible_role_exim4/actions?query=workflow%3A%22Ansible+check+centos%3Acentos8%22) | [ansible test with centos centos8](https://github.com/marketplace/actions/check-ansible-centos-centos8) |

@@ -2,3 +2,4 @@
 exim4__package: exim
 exim4__daemon: exim
 exim4__configuration_file: /etc/exim/exim.conf
+exim4__mailx_package: mailx
